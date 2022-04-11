@@ -5,13 +5,15 @@
 # flux [0] - inflow to snow reseervoir , flux[1] - outflow from snow reservoir, flux[2] - outflow from snow reservoir + precipitation, flux[3]- inflow to fastflow reservoir,
 # flux[4] - inflow to unsat zone, flux[5] - outflow from fastflow reservoir, flux[6] - outflowfrom unsaturated zone, flux [7]- evapotranspiration, flux[8]- inflow to interflow reserv
 # flux[9] - outflow from interflow reservoir, flux []
-import pandas as pd
-import numpy as np
-from snowpack_reservoir import snowpack
-from fastflow_reservoir import fastflow
-from unsaturated_reservoir import unsaturated
-from interflow_reservoir import interflow
-from baseflow_reservoir import baseflow
+
+
+from shm.snowpack_reservoir import snowpack
+from shm.fastflow_reservoir import fastflow
+from shm.unsaturated_reservoir import unsaturated
+from shm.interflow_reservoir import interflow
+from shm.baseflow_reservoir import baseflow
+
+
 def prediction(data,state,flux,para, chara):
   # snowpack reservoir
   flux[0],flux[1],flux[2],state[0]= snowpack(data[0],data[1],flux[0], flux[1],flux[2], state[0], para["t_crit"],para["cat_dd"])
