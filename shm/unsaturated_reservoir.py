@@ -12,9 +12,6 @@ def unsaturated(cat_quin, cat_quout, cat_et, cat_su, beta, cat_sumax, temp, time
   #landuse correction factor
   klu =0.5
 
-  from Evapotranspiration import f_r_teta
-  from Evapotranspiration import f_ETpo_Penman
-  
   #soil moisture correction factor
   kteta = f_r_teta(cat_su,cat_sumax)
 
