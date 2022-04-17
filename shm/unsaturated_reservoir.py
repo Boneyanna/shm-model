@@ -1,3 +1,5 @@
+from shm.Evapotranspiration import f_r_teta, f_ETpo_Penman
+
 def unsaturated(cat_quin, cat_quout, cat_et, cat_su, beta, cat_sumax, temp, time_step,rg,vel,rh):
   #unsaturated zone
   psi = (cat_su / cat_sumax) ** beta      # runoff coefficient - part fo rain becoming runoff

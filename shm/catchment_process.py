@@ -13,8 +13,6 @@ from shm.fastflow_reservoir import fastflow
 from shm.unsaturated_reservoir import unsaturated
 from shm.interflow_reservoir import interflow
 from shm.baseflow_reservoir import baseflow
-from shm.Evapotranspiration import f_r_teta,f_ETpo_Penman
-
 def prediction(data,state,flux,para, chara):
   # snowpack reservoir
   (flux.cat_qsin,flux.cat_qsout,flux.cat_qspout,state.cat_ss)= snowpack (data[0],data[1],flux.cat_qsin, flux.cat_qsout,flux.cat_qspout, state.cat_ss, para["t_crit"],para["cat_dd"])
