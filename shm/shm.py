@@ -54,6 +54,8 @@ class SHM:
 
     def set_params(self, params: dict) -> None:
         # TODO: validate and check the parameters
+        if len(params) != 9:
+           raise ValueError('Parameters must have length of 9') 
         self._params = params
 
     def get_cat_attributes(self) -> dict:
@@ -72,6 +74,8 @@ class SHM:
         # ie:
         if X.shape[1] != 6:
             raise ValueError('X must have shape (n, 6)')
+        if np.isnan(X).any():
+            raise ValueError('X must not have gaps')
 
         # make copy:
         _X = X.copy()

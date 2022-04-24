@@ -4,6 +4,14 @@
         "interval": "5min"
     },
     "parameters": {
-
+        "t_crit": 0.7,
+        "cat_dd": 0.0001,
+        "cat_beta": 1.8,
+        "cat_sumax": 0.15,
+        "cat_thresh": 0.0016,
+        "cat_kf": 6,
+        "cat_perc": 0.25,
+        "cat_ki": 250,
+        "cat_kb": 40000
     }    
 }
